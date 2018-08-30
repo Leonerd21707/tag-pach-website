@@ -1,417 +1,95 @@
 <!DOCTYPE html>
-<!--desenvolvido por Leonardo rocha-->
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger House - O melhor Hamburguer do Mundo</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            /*Garante que ao adicionar o padding o elemento escale para dentro*/
-            font-family: 'Rockwell';
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 1366px;
-            margin: 0 auto 0 auto;
-        }
-
-        .topo {
-            width: 1366px;
-            height: 50px;
-            background-color: brown;
-        }
-
-        .menu ul {
-            list-style-type: none;
-            padding-top: 8px
-        }
-
-        .menu li {
-            display: inline;
-            /* color: #ffffff; */
-            font-size: 32px;
-            margin-left: 75px;
-            margin-right: 75px;
-        }
-
-        .menu a {
-            padding: 6px 50px 6px 50px;
-            /* border: solid 1px #000; */
-            color: #ffffff;
-            text-decoration: none;
-            /*removendo underline no link*/
-            transition: background-color 0.2s;
-        }
-
-        /*eventos em css*/
-
-        /*pseudo class*/
-
-        .menu a:hover {
-            background-color: rgb(255, 208, 0);
-
-        }
-
-        .banner {
-            width: 100%;
-            Height: 512px;
-            background: url('imagens/burguer_banner_1.png');
-            background-size: cover;
-            background-position-x: center;
-        }
-
-        .banner img {
-            display: block;
-            width: 256px;
-            height: 256px;
-            margin: 0 auto;
-            transform: translateY(-30px);
-        }
-
-        /*Estilizando elementos de texto*/
-
-        h1 {
-            font-size: 64px;
-        }
-
-        h2 {
-            font-size: 56px;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 40px;
-        }
-
-        h4 {
-            font-size: 30px;
-        }
-
-        h5 {
-            font-size: 24px;
-        }
-
-        h6 {
-            font-size: 18px;
-        }
-
-        /*Aplicando uma mesma regra a varios seletores*/
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 800;
-        }
-
-        /*Configurando espacamento de sessoes*/
-
-        section {
-            margin: 64px 0px;
-        }
-
-        /*Secao: burgers*/
-
-        #burgers h2 {
-            color: #B22021;
-        }
-
-        /*Estilizando o cardapio*/
-
-        #cardapioBurger {
-            margin: 72px auto 0px auto;
-            width: 1040px;
-        }
-
-        #cardapioBurger .preco {
-            color: red;
-            font-size: 48px;
-            font-weight: 800;
-            margin-top: 32px;
-        }
-
-        .cardapio-burger-item {
-            background-color: #FF8B1E;
-            color: white;
-            display: inline-block;
-            height: 310px;
-            padding: 15px;
-            width: 500px;
-        }
-
-        .cardapio-burger-item h3 {
-            text-align: right;
-        }
-
-        .cardapio-imagem {
-            display: inline-block;
-            width: 220px;
-        }
-
-        .cardapio-imagem img {
-            height: 120px;
-        }
-
-        .cardapio-ingredientes {
-            display: inline-block;
-            font-size: 24px;
-            margin-left: 26px;
-        }
-
-        /*cardapio shakes*/
-
-        #Shakes {
-            height: 330px;
-        }
-
-        #Shakes h2 {
-            color: #f2ad00;
-        }
-
-        #cardapioShakes {
-            margin: auto;
-            width: 960px;
-        }
-
-        .cardapio-shakes-item {
-            background-color: green;
-            color: white;
-            float: left;
-            margin-top: 72px;
-            padding: 12px;
-            text-align: center;
-            width: 300px;
-        }
-
-        .cardapio-shakes-item ~ .cardapio-shakes-item{
-            margin-left: 12px;
-        }
-
-        .cardapio-shakes-item h3 {
-            font-size: 25px;
-        }
-
-        .cardapio-shakes-item img {
-            height: 110px;
-        }
-
-        .cardapio-shakes-item p {
-            color: #f2ad00;
-            font-size: 24px;
-            text-align: left;
-        }
-
-        /*Margens, tamanhos e paddings*/
-
-        .ma-l-p {
-            margin-left: 26px;
-        }
-
-        .ma-l-m {
-            margin-left: 36px;
-        }
-
-        .ma-l-g {
-            margin-left: 72px;
-        }
-
-        .ma-t-p {
-            margin-top: 26px;
-        }
-
-        .ma-t-m {
-            margin-top: 36px;
-        }
-
-        .ma-t-g {
-            margin-top: 72px;
-        }
-
-        /*quebras*/
-        .quebra .quadrado {
-            background-color: black;
-            height: 16px;
-
-        }
-
-        .quebra .circulo {
-            background-color:black;
-            border-radius: 50%;
-            height: 64px;
-            margin: auto;
-            margin-top: -40px;
-            width: 64px;
-        }
-    </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
 </head>
-
+<!-- começo da tag body -->
 <body>
-    <div class="container">
-        <header class="topo">
-            <nav class="menu">
-                <ul>
-                    <Li>
-                        <a href="index.html">Home</a>
-                    </Li>
-                    <!--para voltar pastas ../-->
-                    <Li>
-                        <a href="#">Burger</a>
-                    </Li>
-                    <Li>
-                        <a href="#">Shakes</a>
-                    </Li>
-                    <Li>
-                        <a href="#">Onde?</a>
-                    </Li>
-                </ul>
-            </nav>
-        </header>
+        
+        <!-- inicio da tag main -->
         <main>
-            <div class="banner">
-                <img src="imagens/logo.png" alt="Logo da Hamburgueria - uma ilustração de hamburguer em cima com umtexto hamburguer - take way"
-                />
-            </div>
-            <!--desenhando a quebra-->
-            <div class="quebra">
-                <div class="quadrado"></div>
-                <div class="circulo"></div>
+                <!-- inicio da section esquerda -->
+               <section class="esquerdo">
+                       <!-- começo do header -->
+                       <header>
+                               <h1>Leonardo P. Rocha</h1>
+                               <h2>Web-Designer</h2>
+                               <img src="imagens/foto-perfil.png" alt="Minha foto">
+                               <ul>
+                                       <li><span>DATA DE NASCIMENTO:</span> 21/02/2001</li>
+                                       <LI><span>NATURALIDADE:</span> SÃO PAULO</LI>
+                                       <LI><span>ESTADO CIVIL:</span> SOLTEIRO</LI>
+                                       <LI><span>SEXO:</span> MASCULINO</LI>
+                               </ul>
+                               <P>Sou Web-Designer. Comecei a trabalhar na area recentemente
+                                       e estou procurando me aprimorar e aumentar a minha gama de conhecimento 
+                                       nesta area. Procuro resolver as coisas da forma mais pratica possivel,
+                                       o que importa pra mim é a experiencia do usuario.
+                               </P>
+                       </header>
+                       <!-- fim do header -->
+                       <div class="linha"></div>
+                       <!-- começo da div formaçoes -->
+                       <div class="formacoes">
+                               
+                               <h2><img src="imagens/student-icon.png" alt=""> FORMAÇÃO ACADEMICA</h2>
+                               <ul>
+                                       <li>E.E.Jardim Noronha V</li>
+                                       <li>Curso: Tecnico em Desenvolvimento de Sistemas</li>
+                                       <li>Inicio: 2018/08</li>
+                               </ul>
+                       </div>
+               </section>
+               <!-- fim da section esquerda -->
+               
+               <!-- comeco da section direita -->
+                <section class="direito">
+                        <!-- começo da div habilidades -->
+                      <DIV class="habilidades"> 
+                               <h2><img src="imagens/gears-icon.png" alt=""> SOFTWARES</h2>
+                        <ul>
+                                <li><img src="imagens/illustrator-icon.png" alt=""> Adobe Illustrator</li>
+                                <li><img src="imagens/photoshop-icon.png" alt=""> Adobe Photoshop</li>
+                                <li><img src="imagens/vscode-icon.png" alt=""> Visual studio code</li>
+                                <li><img src="imagens/dreamweaver-icon.png" alt=""> Adobe Dreamweaver</li>
 
-            </div>
-            <!--fim div banner-->
-            <section id="burgers">
-                <h2>BURGERS</h2>
-                <div id="cardapioBurger" class="ma-t-m">
-                    <div class="cardapio-linha">
-                        <div class="cardapio-burger-item">
-                            <h3>FATONE</h3>
-                            <div class="cardapio-imagem">
-                                <img src="imagens/burguer_1.png" alt="Hambúrguer de carne bovina">
-                            </div>
-                            <!--Bloco imagem-->
-                            <div class="cardapio-ingredientes">
-                                <ul>
-                                    <li>Carne bovina</li>
-                                    <li>Alface</li>
-                                    <li>Tomate</li>
-                                    <li>Picles</li>
-                                </ul>
-                            </div>
-                            <!--Bloco ingredientes-->
-                            <p class="preco">R$ 19,90</p>
-                        </div>
-                        <!--Fim item da linha do cardapio-->
-                        <div class="cardapio-burger-item ma-l-m">
-                            <h3>FATONE</h3>
-                            <div class="cardapio-imagem">
-                                <img src="imagens/burguer_2.png" alt="Hambúrguer de carne bovina">
-                            </div>
-                            <!--Bloco imagem-->
-                            <div class="cardapio-ingredientes">
-                                <ul>
-                                    <li>Carne bovina</li>
-                                    <li>Alface</li>
-                                    <li>Tomate</li>
-                                    <li>Picles</li>
-                                </ul>
-                            </div>
-                            <!--Bloco ingredientes-->
-                            <p class="preco">R$ 19,90</p>
-                        </div>
-                        <!--Fim item da linha do cardapio-->
-                    </div>
-                    <!--Fim linha do cardapio-->
-                    <div class="cardapio-linha ma-t-m">
-                        <div class="cardapio-burger-item">
-                            <h3>FATONE</h3>
-                            <div class="cardapio-imagem">
-                                <img src="imagens/burguer_3.png" alt="Hambúrguer de carne bovina">
-                            </div>
-                            <!--Bloco imagem-->
-                            <div class="cardapio-ingredientes">
-                                <ul>
-                                    <li>Carne bovina</li>
-                                    <li>Alface</li>
-                                    <li>Tomate</li>
-                                    <li>Picles</li>
-                                </ul>
-                            </div>
-                            <!--Bloco ingredientes-->
-                            <p class="preco">R$ 19,90</p>
-                        </div>
-                        <!--Fim item da linha do cardapio-->
-                        <div class="cardapio-burger-item ma-l-m">
-                            <h3>FATONE</h3>
-                            <div class="cardapio-imagem">
-                                <img src="imagens/burguer_4.png" alt="Hambúrguer de carne bovina">
-                            </div>
-                            <!--Bloco imagem-->
-                            <div class="cardapio-ingredientes">
-                                <ul>
-                                    <li>Carne bovina</li>
-                                    <li>Alface</li>
-                                    <li>Tomate</li>
-                                    <li>Picles</li>
-                                </ul>
-                            </div>
-                            <!--Bloco ingredientes-->
-                            <p class="preco">R$ 19,90</p>
-                        </div>
-                        <!--Fim item da linha do cardapio-->
-                    </div>
-                    <!--Fim linha do cardapio-->
-                </div>
-                <!--Fim cardapio burgers-->
-            </section>
-
-            <div class="quebra">
-                    <div class="quadrado"></div>
-                    <div class="circulo"></div>
-    
-                </div>
-            <section id="Shakes">
-                <h2>Shakes</h2>
-                <DIV id="cardapioShakes">
-                    <div class="cardapio-shakes-item">
-                        <h3>CHOCOLATE DREAM</h3>
-                        <img src="imagens/shake_1.png" alt="milkshake chocolate dream">
-                        <p class="preco">R$ 7,50</p>
-                    </div>
-                    <!--fim do item cardapio-->
-                    <!--fim do cardapio shakes-->
-                    <div class="cardapio-shakes-item">
-                        <h3>CHOCOLATE DREAM</h3>
-                        <img src="imagens/shake_2.png" alt="milkshake chocolate dream">
-                        <p class="preco">R$ 7,50</p>
-                    </div>
-                    <!--fim do item cardapio-->
-                    <div class="cardapio-shakes-item">
-                        <h3>CHOCOLATE DREAM</h3>
-                        <img src="imagens/shake_3.png" alt="milkshake chocolate dream">
-                        <p class="preco">R$ 7,50</p>
-                    </div>
-                    <!--fim do item cardapio-->
+                        </ul>
                 </DIV>
+                <!-- fim da div habilidades -->
+                <div class="linha"></div>
 
-            </section>
-           
-            <!--fim da section-->
-            <span style="clear: both; display: block;"></span>
-            
-            <div class="quebra">
-                    <div class="quadrado"></div>
-                    <div class="circulo"></div>
-    
+                <!-- começo da div experiencias -->
+                <div class="experiencia">
+                        <h2><img src="imagens/professional-icon.png" alt=""> PROFISSIONAL</h2>
+                        <ul>
+                                <p>para ver meus trabalhos acesse os seguintes links: </p>
+                                <a href="https://github.com/Leonerd21707?tab=repositories"><li><img src="imagens/github-icon.png" alt=""> GITHUB</li></a>
+                               <a href="https://br.pinterest.com/lr59252/" ><LI><img src="imagens/pinterest-icon.png" alt=""> PINTEREST</LI></a>
+                        </ul>
                 </div>
+                <!-- fim da div experiencias -->
+                <div class="linha"></div>
+                <!-- começo da div contatos -->
+                <div class="contato">
+                        <h2><img src="imagens/contact-icon.png" alt=""> CONTATO</h2>
+                        <ul>
+                                <li><img src="imagens/email-icon.png" alt=""> lr59252@gmail.com</li>
+                                <li><img src="imagens/facebook-icon.png" alt=""> facebook.com/LeonardoPereira</li>
+                                <li><a href="https://twitter.com/Leon21707"><img src="imagens/twitter-icon.png" alt=""> @leon_rocha</a></li>
+                        </ul>
+                </div>
+                <!-- fim da div contatos -->
+
+                </section>
+                <!-- fim da section direita -->
         </main>
-    </div>
-    <!--fim container-->
+        <!-- fim da tag main -->
 </body>
+<!-- fim da tag body -->
 
 </html>
